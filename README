@@ -1,0 +1,22 @@
+Homework 5!
+
+Binary and trinary search alogrithms!
+
+Pseudocode for Trinary Search:
+Algorithm Trinary(A,l,r, target)
+A is an array we are searching in
+l, r are the left and right indices of the section of A we are looking in
+if l>r 
+    then return -1
+leftPivot = (l+r)/3  # first pivot at 1/3rd position
+rightPivot = 2(l+r)/3 # second pivot at 2/3rd position
+if (target == A[leftPivot])
+    return leftPivot
+else if (target == A[rightPivot])
+    return rightPivot
+else if (target < A[leftPivot])
+        return Trinary(A, l, leftPivot -1, target)
+else if (target > A[rightPivot])
+    return Trinary(A, rightPivot+1, r, target)
+else
+    return Trinary(A, leftPivot+1, rightPivot-1, target)
